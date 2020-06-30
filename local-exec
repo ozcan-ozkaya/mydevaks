@@ -1,9 +1,0 @@
-﻿resource "null_resource" "post-config" {
-    depends_on = [azurerm_kubernetes_cluster]
-
-    provisioner "local-exec" {
-        command = <<EOT
-        echo "${azurerm_kubernetes_cluster.mydevaks.kube_config_raw}" >> kube.config
-        EOT
-    }
-}
