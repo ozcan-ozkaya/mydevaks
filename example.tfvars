@@ -13,7 +13,7 @@ vnet_cidr = ["10.1.0.0/16"]
 system_subnet_prefix = ["10.1.1.0/24"]
 stateless_subnet_prefix = ["10.1.2.0/24"]
 stateful_subnet_prefix = ["10.1.3.0/24"]
-subnet_names = ["system", "linux-workloads", "win-workloads"]
+subnet_names = ["system", "stateless-workloads", "stateful-workloads"]
 
 system_nodes_pool_name = "system"
 system_nodes_count = 1
