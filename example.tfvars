@@ -1,7 +1,7 @@
-﻿subscription_id = ""
-client_id = ""
-tenant_id = ""
-client_secret = ""
+﻿ARM_SUBSCRIPTION_ID = ""
+ARM_CLIENT_ID = ""
+ARM_TENANT_ID = ""
+ARM_CLIENT_SECRET = ""
 
 region = "UK South"
 arg_name = "mydev_rg"

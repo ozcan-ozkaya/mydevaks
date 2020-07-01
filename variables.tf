@@ -1,15 +1,15 @@
-﻿variable "subscription_id" {
+﻿variable "ARM_SUBSCRIPTION_ID" {
     description = "Azure subscription id"
 }
-variable "client_id" {
+variable "ARM_CLIENT_ID" {
     description = "Azure client id"
 }
 
-variable "tenant_id" {
+variable "ARM_TENANT_ID" {
     description = "Azure tenant id"
 }
 
-variable "client_secret" {
+variable "ARM_CLIENT_SECRET" {
     description = "Azure Client secret"
 }
 variable "region" {
