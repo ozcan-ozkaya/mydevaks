@@ -1,5 +1,14 @@
-﻿Set up Azure storage to store Terraform state
+﻿## Set up Azure storage to store Terraform state
 
-Follow instructions on the link below
+## Create a container in Azure storage
+`az storage container create -n tfstate --account-name <YourAzureStorageAccountName> --account-key <YourAzureStorageAccountKey>
 
-https://docs.microsoft.com/en-us/azure/developer/terraform/create-k8s-cluster-with-tf-and-aks?toc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Faks%2Ftoc.json&bc=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fbread%2Ftoc.json#set-up-azure-storage-to-store-terraform-state
+## Create the cluster 
+terraform init -backend-config="storage_account_name=<YourAzureStorageAccountName>" -backend-config="container_name=tfstate" -backend-config="access_key=<YourStorageAccountAccessKey>" -backend-config="key=codelab.microsoft.tfstate"
+
+## Run the terraform plan command to create the Terraform plan that defines the infrastructure elements.
+terraform plan -out out.plan
+
+
+## Run the terraform apply command to apply the plan to create the Kubernetes cluster.
+terraform apply out.plan

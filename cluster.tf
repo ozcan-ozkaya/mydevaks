@@ -42,7 +42,8 @@
        }
 
         oms_agent {
-            enabled = false
+            enabled = true
+            log_analytics_workspace_id = azurerm_log_analytics_workspace.aks-workspace.id
         }
     }
 }

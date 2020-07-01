@@ -93,3 +93,15 @@ variable "admin_username" {
 variable "ssh_public_key" {
     description = "ssh key path for linux worker nodes"
 }
+
+variable "log_analytics_workspace_name" {
+    description = "Workspace name for AKS cluster log analytics"
+}
+
+variable "log_analytics_workspace_location" {
+    description = "Workspace Azure location for AKS cluster log analytics"
+}
+
+variable "log_analytics_workspace_sku" {
+    description = "Log analytic workspace plan type"
+}
